@@ -2,7 +2,7 @@ services:
   backend:
     build: ./backend
     ports:
-      - "5050:5050" 
+      - "5000:5000" 
     networks:
       - mern_network
     environment:
@@ -13,7 +13,7 @@ services:
   frontend:
     build: ./frontend
     ports:
-      - "5173:5173"  
+      - "3000:3000"  
     networks:
       - mern_network
     environment:
@@ -22,7 +22,7 @@ services:
   mongodb:
     image: mongo:latest  
     ports:
-      - "27017:27017"  
+      - "27020:27020"  
     networks:
       - mern_network
     volumes:
